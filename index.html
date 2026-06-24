@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,83 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
 
+        :root {
+            color-scheme: dark;
+            --bg: #020617;
+            --surface: #09121f;
+            --surface-soft: #0e1d2d;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-strong: #0f766e;
+            --border: rgba(148, 163, 184, 0.18);
+            --hero-overlay: rgba(15, 23, 42, 0.75);
+            --hero-overlay-light: rgba(15, 23, 42, 0.75);
+            --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpolygon points='16,2 20,12 30,12 22,18 25,28 16,22 7,28 10,18 2,12 12,12' fill='%23f8e3a6' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E") 16 16, auto;
+        }
+
+        html.light {
+            color-scheme: light;
+            --bg: #e6eef4;
+            --surface: #d8e3ed;
+            --surface-soft: #f3f7fb;
+            --text: #0f172a;
+            --muted: #64748b;
+            --accent: #0f766e;
+            --accent-strong: #1d4ed8;
+            --border: rgba(148, 163, 184, 0.25);
+            --hero-overlay: rgba(226, 236, 246, 0.65);
+            --hero-overlay-light: rgba(226, 236, 246, 0.75);
+        }
+
+        html,
+        body {
+            background: var(--bg);
+            color: var(--text);
+            cursor: var(--cursor);
+        }
+
+        button,
+        a,
+        label {
+            cursor: var(--cursor);
+        }
+
+        input,
+        textarea,
+        select {
+            cursor: text;
+        }
+
+        nav,
+        #mobile-menu,
+        section,
+        footer,
+        .card-surface,
+        .card-surface-soft {
+            background: var(--surface);
+            border-color: var(--border);
+        }
+
+        html.light nav,
+        html.light #mobile-menu,
+        html.light section,
+        html.light footer,
+        html.light .card-surface,
+        html.light .card-surface-soft {
+            background: var(--surface-soft);
+            border-color: rgba(148, 163, 184, 0.22);
+        }
+
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
             background-size: cover;
             background-position: center;
             animation: bgFloat 30s ease-in-out infinite;
+        }
+
+        html.light .hero-bg {
+            background-image: linear-gradient(var(--hero-overlay-light), var(--hero-overlay-light)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
         }
 
         @keyframes bgFloat {
@@ -91,12 +163,42 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #0f766e;
+            background: var(--accent-strong);
         }
 
         .wave-divider {
             height: 60px;
-            background: linear-gradient(to bottom, #f8fafc, transparent);
+            background: linear-gradient(to bottom, rgba(248, 250, 252, 0.9), transparent);
+        }
+
+        html.light .bg-white {
+            background-color: #f3f7fb !important;
+        }
+
+        html.light .bg-white\/10 {
+            background-color: rgba(243, 247, 251, 0.9) !important;
+        }
+
+        html.light .bg-slate-900,
+        html.light .bg-slate-900\/95,
+        html.light .bg-slate-900\/80,
+        html.light .bg-slate-950 {
+            background-color: #eef4fb !important;
+            color: var(--text) !important;
+        }
+
+        html.light .text-slate-700,
+        html.light .text-slate-600 {
+            color: var(--muted) !important;
+        }
+
+        html.light .text-slate-500,
+        html.light .text-slate-300 {
+            color: #64748b !important;
+        }
+
+        html.light .text-white {
+            color: var(--text) !important;
         }
     </style>
 </head>
@@ -107,20 +209,20 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-x-3">
                 <div
-                    class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                    class="w-10 h-10 bg-sky-800 rounded-full flex items-center justify-center text-white text-xl font-bold">
                     C</div>
                 <div>
                     <span class="text-2xl font-semibold tracking-tight">Carmel by the Sea</span>
-                    <span class="block text-xs text-teal-400 -mt-1">Ministry</span>
+                    <span class="block text-xs text-sky-300 -mt-1">Ministry</span>
                 </div>
             </div>
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-teal-700 transition-colors">About</a>
-                <a href="#support" class="hover:text-teal-700 transition-colors">Grief Support</a>
-                <a href="#prayer" class="hover:text-teal-700 transition-colors">Prayer Requests</a>
-                <a href="#give" class="hover:text-teal-700 transition-colors">Give</a>
+                <a href="#about" class="hover:text-sky-300 transition-colors">About</a>
+                <a href="#support" class="hover:text-sky-300 transition-colors">Grief Support</a>
+                <a href="#prayer" class="hover:text-sky-300 transition-colors">Prayer Requests</a>
+                <a href="#give" class="hover:text-sky-300 transition-colors">Give</a>
             </div>
 
             <div class="flex items-center gap-x-4">
@@ -130,7 +232,7 @@
                 </button>
                 <a href="#prayer"
                     onclick="document.getElementById('prayer-section').scrollIntoView({ behavior: 'smooth' });"
-                    class="bg-teal-600 hover:bg-teal-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-x-2">
+                    class="bg-sky-800 hover:bg-sky-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-x-2">
                     <i class="fa-solid fa-hands-praying"></i>
                     Prayer Request
                 </a>
@@ -144,10 +246,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 py-4 px-6">
             <div class="flex flex-col gap-y-4 text-sm font-medium">
-                <a href="#about" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">About Us</a>
-                <a href="#support" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Grief Support</a>
-                <a href="#prayer" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Submit Prayer</a>
-                <a href="#give" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Ways to Give</a>
+                <a href="#about" class="py-2 hover:text-sky-300" onclick="toggleMobileMenu()">About Us</a>
+                <a href="#support" class="py-2 hover:text-sky-300" onclick="toggleMobileMenu()">Grief Support</a>
+                <a href="#prayer" class="py-2 hover:text-sky-300" onclick="toggleMobileMenu()">Submit Prayer</a>
+                <a href="#give" class="py-2 hover:text-sky-300" onclick="toggleMobileMenu()">Ways to Give</a>
             </div>
         </div>
     </nav>
@@ -167,7 +269,7 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#prayer"
                     onclick="document.getElementById('prayer-section').scrollIntoView({ behavior: 'smooth' }); return false;"
-                    class="bg-slate-800/90 text-teal-100 hover:bg-slate-700/80 px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-x-3 transition-all shadow-lg shadow-slate-900/40">
+                    class="bg-slate-800/90 text-sky-100 hover:bg-slate-700/80 px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-x-3 transition-all shadow-lg shadow-slate-900/40">
                     <i class="fa-solid fa-hands-praying text-2xl"></i>
                     Submit a Prayer Request
                 </a>
@@ -220,10 +322,10 @@
                         Whether you're in the early days of shock or years into the journey, you are not alone.
                         Our team prays with and for you, offering a listening ear grounded in the hope of the Gospel.
                     </p>
-                    <div class="mt-8 flex items-center gap-x-4 text-sm text-teal-700">
-                        <div class="flex-1 h-px bg-teal-200"></div>
+                    <div class="mt-8 flex items-center gap-x-4 text-sm text-sky-300">
+                        <div class="flex-1 h-px bg-sky-200"></div>
                         <span class="font-medium">Psalm 147:3</span>
-                        <div class="flex-1 h-px bg-teal-200"></div>
+                        <div class="flex-1 h-px bg-sky-200"></div>
                     </div>
                 </div>
                 <div class="bg-slate-900/95 p-8 rounded-3xl border border-slate-800">
@@ -255,14 +357,14 @@
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-book-open text-2xl text-teal-300"></i>
+                            <i class="fa-solid fa-book-open text-2xl text-sky-300"></i>
                             <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Scripture</span>
                         </div>
                         <h3 class="text-2xl font-semibold mb-3 text-slate-100">Scriptures for the Brokenhearted</h3>
                         <p class="text-slate-300 line-clamp-3">Meditations on God's comfort, restoration, and the
                             promise of new beginnings in Christ.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-sky-300 font-medium group-hover:gap-x-2 transition-all">Read
                             now <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
@@ -275,14 +377,14 @@
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-seedling text-2xl text-teal-300"></i>
+                            <i class="fa-solid fa-seedling text-2xl text-sky-300"></i>
                             <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Practical</span>
                         </div>
                         <h3 class="text-2xl font-semibold mb-3 text-slate-100">Navigating the First Days</h3>
                         <p class="text-slate-300 line-clamp-3">Gentle steps, community support ideas, and ways to care
                             for yourself and loved ones in early grief.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-sky-300 font-medium group-hover:gap-x-2 transition-all">Read
                             now <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
@@ -295,14 +397,14 @@
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-users text-2xl text-teal-300"></i>
+                            <i class="fa-solid fa-users text-2xl text-sky-300"></i>
                             <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Community</span>
                         </div>
                         <h3 class="text-2xl font-semibold mb-3 text-slate-100">Stories of Hope</h3>
                         <p class="text-slate-300 line-clamp-3">Real testimonies of God's faithfulness through loss. You
                             are not alone in this journey.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-sky-300 font-medium group-hover:gap-x-2 transition-all">Read
                             stories <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
@@ -318,8 +420,7 @@
     <section id="prayer" class="py-20 bg-slate-950">
         <div class="max-w-2xl mx-auto px-6">
             <div class="text-center mb-12">
-                <div
-                    class="inline-flex items-center justify-center w-16 h-16 bg-teal-800 text-teal-100 rounded-2xl mb-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-sky-900 text-sky-100 rounded-2xl mb-6">
                     <i class="fa-solid fa-hands-praying text-4xl"></i>
                 </div>
                 <h2 class="text-4xl font-semibold tracking-tight text-slate-100">Share Your Prayer Request</h2>
@@ -331,29 +432,29 @@
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Your Name (optional)</label>
                     <input type="text" name="name"
-                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-2xl focus:outline-none text-lg text-slate-100">
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-sky-400 rounded-2xl focus:outline-none text-lg text-slate-100">
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Email Address <span
                             class="text-rose-400">*</span></label>
                     <input type="email" name="email" required
-                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-2xl focus:outline-none text-lg text-slate-100">
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-sky-400 rounded-2xl focus:outline-none text-lg text-slate-100">
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">How can we pray for you? <span
                             class="text-rose-400">*</span></label>
                     <textarea name="request" rows="6" required
-                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-3xl focus:outline-none text-lg resize-y text-slate-100"></textarea>
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-sky-400 rounded-3xl focus:outline-none text-lg resize-y text-slate-100"></textarea>
                 </div>
                 <div class="flex items-start gap-x-3">
-                    <input type="checkbox" id="followup" name="followup" class="mt-1.5 w-5 h-5 accent-teal-400">
+                    <input type="checkbox" id="followup" name="followup" class="mt-1.5 w-5 h-5 accent-sky-400">
                     <label for="followup" class="text-sm text-slate-300 leading-relaxed">
                         I would appreciate a follow-up prayer or encouragement from the team.
                     </label>
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-teal-700 hover:bg-teal-800 text-white py-5 rounded-2xl text-xl font-semibold transition-all flex items-center justify-center gap-x-3">
+                    class="w-full bg-sky-700 hover:bg-sky-800 text-white py-5 rounded-2xl text-xl font-semibold transition-all flex items-center justify-center gap-x-3">
                     <i class="fa-solid fa-paper-plane"></i>
                     SEND PRAYER REQUEST
                 </button>
@@ -366,40 +467,40 @@
                 <h3 class="text-2xl font-semibold text-emerald-200">Thank You</h3>
                 <p class="mt-3 text-emerald-200">Your request has been received. Our prayer team is lifting you up right
                     now. God bless you.</p>
-                <button onclick="resetForm()" class="mt-6 text-teal-300 underline">Submit another request</button>
+                <button onclick="resetForm()" class="mt-6 text-sky-300 underline">Submit another request</button>
             </div>
         </div>
     </section>
 
     <!-- Give / Donate -->
-    <section id="give" class="py-20 bg-teal-950 text-white">
+    <section id="give" class="py-20 bg-sky-950 text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-semibold tracking-tight mb-6">Partner in Ministry</h2>
-            <p class="max-w-md mx-auto text-teal-200 text-lg">Your generosity helps sustain prayer support, resources,
+            <p class="max-w-md mx-auto text-sky-200 text-lg">Your generosity helps sustain prayer support, resources,
                 and outreach for those in need.</p>
 
             <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                 <div class="bg-slate-900/80 backdrop-blur p-10 rounded-3xl border border-slate-800">
                     <h3 class="text-3xl font-semibold mb-4 text-slate-100">One-Time Gift</h3>
-                    <p class="text-teal-200 mb-8">Support today's prayer needs or a specific project.</p>
+                    <p class="text-sky-200 mb-8">Support today's prayer needs or a specific project.</p>
                     <a href="#"
                         onclick="alert('In production: Link to your Stripe or PayPal one-time donation page'); return false;"
-                        class="block w-full py-5 bg-teal-600 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-teal-500 transition-all">
+                        class="block w-full py-5 bg-sky-700 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-sky-500 transition-all">
                         Give Now
                     </a>
                 </div>
                 <div class="bg-slate-900/80 backdrop-blur p-10 rounded-3xl border border-slate-800">
                     <h3 class="text-3xl font-semibold mb-4 text-slate-100">Monthly Partner</h3>
-                    <p class="text-teal-200 mb-8">Join our community of faithful supporters standing with families in
+                    <p class="text-sky-200 mb-8">Join our community of faithful supporters standing with families in
                         grief.</p>
                     <a href="#" onclick="alert('In production: Link to recurring donation setup'); return false;"
-                        class="block w-full py-5 bg-teal-500 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-teal-400 transition-all">
+                        class="block w-full py-5 bg-sky-700 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-sky-500 transition-all">
                         Become a Monthly Partner
                     </a>
                 </div>
             </div>
 
-            <div class="mt-12 text-sm text-teal-300">
+            <div class="mt-12 text-sm text-sky-300">
                 Carmel by the Sea Ministry is in the process of 501(c)(3) registration.
                 All gifts are used prayerfully for kingdom impact. Thank you for your generosity.
             </div>
@@ -411,7 +512,7 @@
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
                 <div class="flex items-center gap-x-3 text-white mb-6">
-                    <div class="w-8 h-8 bg-teal-700 rounded-full flex items-center justify-center text-xl font-bold">C
+                    <div class="w-8 h-8 bg-sky-800 rounded-full flex items-center justify-center text-xl font-bold">C
                     </div>
                     <span class="text-xl font-semibold">Carmel by the Sea Ministry</span>
                 </div>
@@ -498,35 +599,40 @@
             }
         });
 
-        // Theme toggle (from provided snippet) — default dark, persist in localStorage
+        // Theme toggle — calm light mode and dark mode with localStorage
         (function () {
             const toggle = document.getElementById('theme-toggle');
             const html = document.documentElement;
 
-            function setTheme(isDark) {
+            function setTheme(theme) {
                 if (!toggle) return;
-                if (isDark) {
-                    html.classList.add('dark');
-                    toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                } else {
+                if (theme === 'light') {
                     html.classList.remove('dark');
+                    html.classList.add('light');
                     toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                } else {
+                    html.classList.add('dark');
+                    html.classList.remove('light');
+                    toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
                 }
             }
 
             if (toggle) {
                 toggle.addEventListener('click', () => {
-                    const isDark = !html.classList.contains('dark');
-                    setTheme(isDark);
-                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    const isLight = html.classList.contains('light');
+                    const nextTheme = isLight ? 'dark' : 'light';
+                    setTheme(nextTheme);
+                    localStorage.setItem('theme', nextTheme);
                 });
             }
 
-            // Load saved preference
-            if (localStorage.getItem('theme') === 'light') {
-                setTheme(false);
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                setTheme('light');
+            } else if (savedTheme === 'dark') {
+                setTheme('dark');
             } else {
-                setTheme(true); // default dark
+                setTheme('dark');
             }
         })();
     </script>
