@@ -142,12 +142,12 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-4 px-6">
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 py-4 px-6">
             <div class="flex flex-col gap-y-4 text-sm font-medium">
-                <a href="#about" class="py-2 hover:text-teal-700" onclick="toggleMobileMenu()">About Us</a>
-                <a href="#support" class="py-2 hover:text-teal-700" onclick="toggleMobileMenu()">Grief Support</a>
-                <a href="#prayer" class="py-2 hover:text-teal-700" onclick="toggleMobileMenu()">Submit Prayer</a>
-                <a href="#give" class="py-2 hover:text-teal-700" onclick="toggleMobileMenu()">Ways to Give</a>
+                <a href="#about" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">About Us</a>
+                <a href="#support" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Grief Support</a>
+                <a href="#prayer" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Submit Prayer</a>
+                <a href="#give" class="py-2 hover:text-teal-300" onclick="toggleMobileMenu()">Ways to Give</a>
             </div>
         </div>
     </nav>
@@ -167,13 +167,13 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#prayer"
                     onclick="document.getElementById('prayer-section').scrollIntoView({ behavior: 'smooth' }); return false;"
-                    class="bg-white text-teal-800 hover:bg-amber-100 px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-x-3 transition-all shadow-lg">
+                    class="bg-slate-800/90 text-teal-100 hover:bg-slate-700/80 px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-x-3 transition-all shadow-lg shadow-slate-900/40">
                     <i class="fa-solid fa-hands-praying text-2xl"></i>
                     Submit a Prayer Request
                 </a>
                 <a href="#give"
                     onclick="document.getElementById('give-section').scrollIntoView({ behavior: 'smooth' }); return false;"
-                    class="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all">
+                    class="border-2 border-slate-700/70 hover:bg-slate-800/75 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all">
                     Partner With Us
                 </a>
             </div>
@@ -197,17 +197,17 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-slate-950">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-semibold tracking-tight section-header inline-block">About Carmel by the Sea
                     Ministry</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-xl mx-auto">A place of refuge where grief meets grace.</p>
+                <p class="mt-4 text-lg text-slate-300 max-w-xl mx-auto">A place of refuge where grief meets grace.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <p class="text-lg leading-relaxed text-slate-700">
+                    <p class="text-lg leading-relaxed text-slate-300">
                         Carmel by the Sea Ministry was born from a deep desire to walk alongside those experiencing
                         loss,
                         separation, or the heavy waves of sorrow. Inspired by biblical places of encounter with God —
@@ -216,7 +216,7 @@
                         support,
                         scriptural encouragement, and practical resources for healing.
                     </p>
-                    <p class="mt-6 text-lg leading-relaxed text-slate-700">
+                    <p class="mt-6 text-lg leading-relaxed text-slate-300">
                         Whether you're in the early days of shock or years into the journey, you are not alone.
                         Our team prays with and for you, offering a listening ear grounded in the hope of the Gospel.
                     </p>
@@ -226,125 +226,128 @@
                         <div class="flex-1 h-px bg-teal-200"></div>
                     </div>
                 </div>
-                <div class="bg-stone-100 p-8 rounded-3xl">
+                <div class="bg-slate-900/95 p-8 rounded-3xl border border-slate-800">
                     <div class="aspect-video bg-cover rounded-2xl mb-6"
                         style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
                     </div>
-                    <p class="italic text-slate-600">"He heals the brokenhearted and binds up their wounds."</p>
+                    <p class="italic text-slate-300">"He heals the brokenhearted and binds up their wounds."</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Grief Support / Resources -->
-    <section id="support" class="py-20 bg-stone-50">
+    <section id="support" class="py-20 bg-slate-950">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-semibold tracking-tight section-header inline-block">Grief Support &amp;
                     Resources</h2>
-                <p class="mt-4 max-w-md mx-auto text-slate-600">Biblical encouragement and practical guidance for every
+                <p class="mt-4 max-w-md mx-auto text-slate-300">Biblical encouragement and practical guidance for every
                     step of the journey.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Resource Card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                <div
+                    class="bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-slate-800">
                     <div class="h-48 bg-cover"
                         style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4c8d8e')">
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-book-open text-2xl text-amber-600"></i>
-                            <span class="uppercase tracking-widest text-xs font-medium text-slate-500">Scripture</span>
+                            <i class="fa-solid fa-book-open text-2xl text-teal-300"></i>
+                            <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Scripture</span>
                         </div>
-                        <h3 class="text-2xl font-semibold mb-3">Scriptures for the Brokenhearted</h3>
-                        <p class="text-slate-600 line-clamp-3">Meditations on God's comfort, restoration, and the
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-100">Scriptures for the Brokenhearted</h3>
+                        <p class="text-slate-300 line-clamp-3">Meditations on God's comfort, restoration, and the
                             promise of new beginnings in Christ.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-700 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
                             now <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
 
                 <!-- Resource Card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                <div
+                    class="bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-slate-800">
                     <div class="h-48 bg-cover"
                         style="background-image: url('https://images.unsplash.com/photo-1511632765488-4c0f9d3f7a7a')">
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-seedling text-2xl text-emerald-600"></i>
-                            <span class="uppercase tracking-widest text-xs font-medium text-slate-500">Practical</span>
+                            <i class="fa-solid fa-seedling text-2xl text-teal-300"></i>
+                            <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Practical</span>
                         </div>
-                        <h3 class="text-2xl font-semibold mb-3">Navigating the First Days</h3>
-                        <p class="text-slate-600 line-clamp-3">Gentle steps, community support ideas, and ways to care
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-100">Navigating the First Days</h3>
+                        <p class="text-slate-300 line-clamp-3">Gentle steps, community support ideas, and ways to care
                             for yourself and loved ones in early grief.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-700 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
                             now <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
 
                 <!-- Resource Card 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                <div
+                    class="bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-slate-800">
                     <div class="h-48 bg-cover"
                         style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833a8f1c8a')">
                     </div>
                     <div class="p-8">
                         <div class="flex items-center gap-x-3 mb-4">
-                            <i class="fa-solid fa-users text-2xl text-sky-600"></i>
-                            <span class="uppercase tracking-widest text-xs font-medium text-slate-500">Community</span>
+                            <i class="fa-solid fa-users text-2xl text-teal-300"></i>
+                            <span class="uppercase tracking-widest text-xs font-medium text-slate-400">Community</span>
                         </div>
-                        <h3 class="text-2xl font-semibold mb-3">Stories of Hope</h3>
-                        <p class="text-slate-600 line-clamp-3">Real testimonies of God's faithfulness through loss. You
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-100">Stories of Hope</h3>
+                        <p class="text-slate-300 line-clamp-3">Real testimonies of God's faithfulness through loss. You
                             are not alone in this journey.</p>
                         <a href="#"
-                            class="mt-6 inline-flex items-center text-teal-700 font-medium group-hover:gap-x-2 transition-all">Read
+                            class="mt-6 inline-flex items-center text-teal-300 font-medium group-hover:gap-x-2 transition-all">Read
                             stories <span class="text-xl leading-none">→</span></a>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <p class="text-sm text-slate-500">More resources coming soon. Join our prayer list for updates.</p>
+                <p class="text-sm text-slate-300">More resources coming soon. Join our prayer list for updates.</p>
             </div>
         </div>
     </section>
 
     <!-- Prayer Request -->
-    <section id="prayer" class="py-20 bg-white">
+    <section id="prayer" class="py-20 bg-slate-950">
         <div class="max-w-2xl mx-auto px-6">
             <div class="text-center mb-12">
                 <div
-                    class="inline-flex items-center justify-center w-16 h-16 bg-teal-100 text-teal-700 rounded-2xl mb-6">
+                    class="inline-flex items-center justify-center w-16 h-16 bg-teal-800 text-teal-100 rounded-2xl mb-6">
                     <i class="fa-solid fa-hands-praying text-4xl"></i>
                 </div>
-                <h2 class="text-4xl font-semibold tracking-tight">Share Your Prayer Request</h2>
-                <p class="mt-4 text-lg text-slate-600">Confidential. Compassionate. Covered in prayer by our team.</p>
+                <h2 class="text-4xl font-semibold tracking-tight text-slate-100">Share Your Prayer Request</h2>
+                <p class="mt-4 text-lg text-slate-300">Confidential. Compassionate. Covered in prayer by our team.</p>
             </div>
 
             <form id="prayer-form" data-netlify="true" name="prayer-request" method="POST"
-                class="space-y-8 bg-stone-50 p-10 rounded-3xl border border-stone-200">
+                class="space-y-8 bg-slate-900/95 p-10 rounded-3xl border border-slate-800">
                 <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-2">Your Name (optional)</label>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Your Name (optional)</label>
                     <input type="text" name="name"
-                        class="w-full px-5 py-4 bg-white border border-slate-200 focus:border-teal-400 rounded-2xl focus:outline-none text-lg">
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-2xl focus:outline-none text-lg text-slate-100">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-2">Email Address <span
-                            class="text-rose-500">*</span></label>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Email Address <span
+                            class="text-rose-400">*</span></label>
                     <input type="email" name="email" required
-                        class="w-full px-5 py-4 bg-white border border-slate-200 focus:border-teal-400 rounded-2xl focus:outline-none text-lg">
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-2xl focus:outline-none text-lg text-slate-100">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-2">How can we pray for you? <span
-                            class="text-rose-500">*</span></label>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">How can we pray for you? <span
+                            class="text-rose-400">*</span></label>
                     <textarea name="request" rows="6" required
-                        class="w-full px-5 py-4 bg-white border border-slate-200 focus:border-teal-400 rounded-3xl focus:outline-none text-lg resize-y"></textarea>
+                        class="w-full px-5 py-4 bg-slate-950 border border-slate-700 focus:border-teal-400 rounded-3xl focus:outline-none text-lg resize-y text-slate-100"></textarea>
                 </div>
                 <div class="flex items-start gap-x-3">
-                    <input type="checkbox" id="followup" name="followup" class="mt-1.5 w-5 h-5 accent-teal-700">
-                    <label for="followup" class="text-sm text-slate-600 leading-relaxed">
+                    <input type="checkbox" id="followup" name="followup" class="mt-1.5 w-5 h-5 accent-teal-400">
+                    <label for="followup" class="text-sm text-slate-300 leading-relaxed">
                         I would appreciate a follow-up prayer or encouragement from the team.
                     </label>
                 </div>
@@ -358,12 +361,12 @@
 
             <!-- Success Message -->
             <div id="success-message"
-                class="hidden mt-8 p-8 bg-emerald-50 border border-emerald-200 rounded-3xl text-center">
-                <i class="fa-solid fa-check-circle text-6xl text-emerald-600 mb-4"></i>
-                <h3 class="text-2xl font-semibold text-emerald-800">Thank You</h3>
-                <p class="mt-3 text-emerald-700">Your request has been received. Our prayer team is lifting you up right
+                class="hidden mt-8 p-8 bg-emerald-900/20 border border-emerald-600 rounded-3xl text-center">
+                <i class="fa-solid fa-check-circle text-6xl text-emerald-300 mb-4"></i>
+                <h3 class="text-2xl font-semibold text-emerald-200">Thank You</h3>
+                <p class="mt-3 text-emerald-200">Your request has been received. Our prayer team is lifting you up right
                     now. God bless you.</p>
-                <button onclick="resetForm()" class="mt-6 text-teal-700 underline">Submit another request</button>
+                <button onclick="resetForm()" class="mt-6 text-teal-300 underline">Submit another request</button>
             </div>
         </div>
     </section>
@@ -376,21 +379,21 @@
                 and outreach for those in need.</p>
 
             <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                <div class="bg-white/10 backdrop-blur p-10 rounded-3xl">
-                    <h3 class="text-3xl font-semibold mb-4">One-Time Gift</h3>
-                    <p class="text-teal-100 mb-8">Support today's prayer needs or a specific project.</p>
+                <div class="bg-slate-900/80 backdrop-blur p-10 rounded-3xl border border-slate-800">
+                    <h3 class="text-3xl font-semibold mb-4 text-slate-100">One-Time Gift</h3>
+                    <p class="text-teal-200 mb-8">Support today's prayer needs or a specific project.</p>
                     <a href="#"
                         onclick="alert('In production: Link to your Stripe or PayPal one-time donation page'); return false;"
-                        class="block w-full py-5 bg-white text-teal-950 rounded-2xl font-semibold text-lg hover:bg-amber-300 transition-all">
+                        class="block w-full py-5 bg-teal-600 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-teal-500 transition-all">
                         Give Now
                     </a>
                 </div>
-                <div class="bg-white/10 backdrop-blur p-10 rounded-3xl">
-                    <h3 class="text-3xl font-semibold mb-4">Monthly Partner</h3>
-                    <p class="text-teal-100 mb-8">Join our community of faithful supporters standing with families in
+                <div class="bg-slate-900/80 backdrop-blur p-10 rounded-3xl border border-slate-800">
+                    <h3 class="text-3xl font-semibold mb-4 text-slate-100">Monthly Partner</h3>
+                    <p class="text-teal-200 mb-8">Join our community of faithful supporters standing with families in
                         grief.</p>
                     <a href="#" onclick="alert('In production: Link to recurring donation setup'); return false;"
-                        class="block w-full py-5 bg-amber-400 text-teal-950 rounded-2xl font-semibold text-lg hover:bg-amber-300 transition-all">
+                        class="block w-full py-5 bg-teal-500 text-slate-950 rounded-2xl font-semibold text-lg hover:bg-teal-400 transition-all">
                         Become a Monthly Partner
                     </a>
                 </div>
