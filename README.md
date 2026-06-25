@@ -1,4 +1,4 @@
-# Carmel by the Sea Ministry
+# Carmel by the Sea Ministry 
 
 A serene, faith-centered website for grief support and prayer ministry.
 
