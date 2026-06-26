@@ -29,16 +29,16 @@
 
         html.light {
             color-scheme: light;
-            --bg: #f3eeea;
-            --surface: #ebdfd9;
-            --surface-soft: #f6f2f4;
-            --text: #172734;
-            --muted: #7a7f8d;
-            --accent: #7aa6d6;
-            --accent-strong: #4e78a5;
-            --border: rgba(129, 145, 162, 0.25);
-            --hero-overlay: rgba(240, 236, 232, 0.65);
-            --hero-overlay-light: rgba(243, 239, 234, 0.75);
+            --bg: #f4ede8;
+            --surface: #e7d9d1;
+            --surface-soft: #f8f3ef;
+            --text: #25344a;
+            --muted: #687386;
+            --accent: #7f9dc6;
+            --accent-strong: #5b789f;
+            --border: rgba(124, 142, 159, 0.24);
+            --hero-overlay: rgba(235, 229, 223, 0.8);
+            --hero-overlay-light: rgba(244, 239, 232, 0.92);
         }
 
         html,
@@ -77,7 +77,103 @@
         html.light .card-surface,
         html.light .card-surface-soft {
             background: var(--surface-soft);
-            border-color: rgba(148, 163, 184, 0.22);
+            border-color: rgba(124, 142, 159, 0.22);
+        }
+
+        html.light .hero-bg {
+            background: #e8edf4;
+        }
+
+        html.light .hero-bg .hero-overlay {
+            background: rgba(244, 239, 232, 0.85);
+        }
+
+        html.light .hero-bg .hero-title-keyword,
+        html.light .hero-bg .hero-description {
+            color: #58729a !important;
+        }
+
+        html.light .text-slate-100,
+        html.light .text-slate-200,
+        html.light .text-slate-400,
+        html.light .text-sky-200,
+        html.light .text-sky-300,
+        html.light .text-blue-400,
+        html.light .text-pink-400 {
+            color: #425571 !important;
+        }
+
+        html.light .bg-slate-950,
+        html.light .bg-slate-900,
+        html.light .bg-slate-900\/95,
+        html.light .bg-slate-900\/80,
+        html.light .bg-slate-800\/90,
+        html.light .bg-slate-800\/60 {
+            background-color: #e4dad3 !important;
+            color: #1f2f3b !important;
+        }
+
+        html.light .bg-sky-950 {
+            background-color: #dfe7f2 !important;
+            color: #1f2f3b !important;
+        }
+
+        html.light .bg-sky-800,
+        html.light .bg-sky-700 {
+            background-color: #7c98bb !important;
+        }
+
+        html.light .bg-sky-700:hover,
+        html.light .bg-sky-800:hover,
+        html.light .hover\:bg-slate-700\/80:hover,
+        html.light .hover\:bg-slate-800\/75:hover,
+        html.light .hover\:bg-slate-800:hover,
+        html.light .hover\:bg-slate-800\/60:hover {
+            background-color: rgba(141, 159, 184, 0.92) !important;
+        }
+
+        html.light .bg-emerald-900 {
+            background-color: #bfd5bf !important;
+            color: #1f2f3b !important;
+        }
+
+        html.light .bg-emerald-600 {
+            background-color: #8da995 !important;
+            color: #1f2f3b !important;
+        }
+
+        html.light .border-slate-700,
+        html.light .border-slate-800 {
+            border-color: rgba(115, 128, 146, 0.22) !important;
+        }
+
+        html.light .hero-bg .hero-video {
+            filter: saturate(1.25) contrast(1.05) brightness(1.35);
+        }
+
+        html.light .hero-bg .hero-overlay {
+            background: rgba(247, 240, 232, 0.72);
+        }
+
+        html.light .section-header:after {
+            background: #5a7ea1;
+        }
+
+        html.light .hover\:text-sky-300:hover,
+        html.light .hover\:text-white:hover {
+            color: #4e6d95 !important;
+        }
+
+        html.light ::selection {
+            background: rgba(126, 143, 164, 0.24);
+            color: #1f2f3b;
+        }
+
+        html.light .hover\:bg-slate-800\/75:hover,
+        html.light .hover\:bg-slate-700\/80:hover,
+        html.light .hover\:bg-slate-800:hover,
+        html.light .hover\:bg-slate-800\/60:hover {
+            background-color: rgba(171, 183, 194, 0.88) !important;
         }
 
         .hero-bg {
@@ -184,31 +280,36 @@
         }
 
         html.light .bg-white {
-            background-color: #f5f1ec !important;
+            background-color: #f2e9e3 !important;
         }
 
         html.light .bg-white\/10 {
-            background-color: rgba(245, 241, 236, 0.92) !important;
+            background-color: rgba(242, 233, 227, 0.94) !important;
         }
 
         html.light .bg-slate-900,
         html.light .bg-slate-900\/95,
         html.light .bg-slate-900\/80,
         html.light .bg-slate-950 {
-            background-color: #d8dee3 !important;
+            background-color: #d1d7dd !important;
             color: var(--text) !important;
         }
 
         html.light .text-slate-700,
         html.light .text-slate-600 {
-            color: #55626f !important;
+            color: #4a5a6d !important;
         }
 
         html.light .text-slate-500,
         html.light .text-slate-300 {
-            color: #7b8a99 !important;
+            color: #68788f !important;
         }
 
+        html.light .text-blue-900,
+        html.light .text-sky-800,
+        html.light .text-sky-700,
+        html.light .text-sky-600,
+        html.light .text-sky-500,
         html.light .text-white,
         html.light h1,
         html.light h2,
@@ -217,8 +318,11 @@
         html.light h5,
         html.light h6,
         html.light .section-header,
-        html.light .hero-title-keyword {
-            color: #172734 !important;
+        html.light .hero-title-keyword,
+        html.light .text-blue-400,
+        html.light .text-sky-300,
+        html.light .text-sky-200 {
+            color: #1f2f3b !important;
         }
     </style>
 </head>
